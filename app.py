@@ -3,7 +3,7 @@ import torch
 from flask import Flask, request, render_template, send_from_directory, send_file
 from diffusers import StableDiffusionPipeline
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 
 # Load the Stable Diffusion model
 model_id = "CompVis/stable-diffusion-v1-4"
